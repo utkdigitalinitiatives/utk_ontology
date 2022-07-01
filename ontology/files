@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:dc="http://purl.org/dc/terms/"
+         xmlns:owl="http://www.w3.org/2002/07/owl#">
+
+  <rdf:Property rdf:about="https://digital.lib.utk.edu/ontology/files#hasBehavior">
+    <rdfs:label xml:lang="en">has behavior</rdfs:label>
+    <rdfs:comment>Links a file to a specific IIIF presentation behavior.</rdfs:comment>
+    <rdfs:range rdf:resource="https://digital.lib.utk.edu/ontology/files#Behavior"/>
+    <rdfs:domain rdf:resource="http://pcdm.org/models#File"/>
+    <rdfs:isDefinedBy rdf:resource="https://digital.lib.utk.edu/ontology/files#"/>
+  </rdf:Property>
+
+  <rdfs:Class rdf:about="https://digital.lib.utk.edu/ontology/files#Behavior">
+    <rdfs:label xml:lang="en">Behavior</rdfs:label>
+    <rdfs:comment>A feature that the publisher of IIIF content would prefer the client to use when presenting the resource.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://digital.lib.utk.edu/ontology/files#"/>
+  </rdfs:Class>
+
+  <rdf:Description rdf:about="https://digital.lib.utk.edu/ontology/files#Unordered">
+    <rdf:type rdf:resource="https://digital.lib.utk.edu/ontology/files#Behavior"/>
+    <rdfs:label xml:lang="en">unordered</rdfs:label>
+    <rdfs:seeAlso rdf:resource="https://iiif.io/api/presentation/3.0/#behavior"/>
+    <rdfs:comment>
+    Valid on Collections, Manifests and Ranges. The Canvases included in resources that have this behavior have no
+    inherent order, and user interfaces should avoid implying an order to the user. Disjoint with individuals,
+    continuous, and paged.
+    </rdfs:comment>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="https://digital.lib.utk.edu/ontology/files#Paged">
+    <rdf:type rdf:resource="https://digital.lib.utk.edu/ontology/files#Behavior"/>
+    <rdfs:label xml:lang="en">paged</rdfs:label>
+    <rdfs:seeAlso rdf:resource="https://iiif.io/api/presentation/3.0/#behavior"/>
+    <rdfs:comment>
+    Valid on Collections, Manifests and Ranges, which include Canvases that have at least height and width dimensions.
+    Canvases included in resources that have this behavior represent views that should be presented in a page-turning
+    interface if one is available. The first canvas is a single view (the first recto) and thus the second canvas likely
+    represents the back of the object in the first canvas. If this is not the case, see the behavior value non-paged.
+    Disjoint with unordered, individuals, continuous, facing-pages and non-paged.
+    </rdfs:comment>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="https://digital.lib.utk.edu/ontology/files#">
+    <dc:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2022-07-01</dc:modified>
+    <dc:publisher rdf:resource="http://www.lib.utk.edu/"/>
+    <dc:title xml:lang="en">University of Tennessee Digital Initiatives Files Ontology</dc:title>
+    <rdfs:comment xml:lang="en">Ontology for the the University of Tennessee Libraries to state relationships between files and works when other ontologies can't be used.</rdfs:comment>
+    <rdfs:seeAlso rdf:resource="https://github.com/utkdigitalinitiatives/utk_ontology/"/>
+    <owl:versionInfo>2022/07/01</owl:versionInfo>
+  </rdf:Description>
+
+</rdf:RDF>
