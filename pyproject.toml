@@ -5,7 +5,7 @@ description = "An ontology for UTK things"
 authors = ["Mark Baggett <mbagget1@utk.edu>"]
 
 [tool.poetry.dependencies]
-python = "^3.10"
+python = "3.10.4"
 Flask = "^2.1.2"
 flask_rdf = "^0.2.1"
 rdflib = "^4.1.1"
