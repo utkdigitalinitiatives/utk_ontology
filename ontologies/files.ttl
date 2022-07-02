@@ -1,0 +1,49 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pcdm:  <http://pcdm.org/models#> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix utk: <https://digital.lib.utk.edu/ontology/files#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+utk:hasBehavior a rdf:Property ;
+    rdfs:label "has behavior"@en ;
+    rdfs:comment "Links a pcdm:Object to a specific IIIF presentation behavior."@en ;
+    rdfs:range utk:Behavior ;
+    rdfs:domain pcdm:Object ;
+    rdfs:isDefinedBy utk: .
+
+utk:Behavior a rdfs:Class ;
+     rdfs:label "Behavior"@en ;
+     rdfs:comment "A feature that the publisher of IIIF content would prefer the client to use when presenting the resource."@en ;
+     rdfs:seeAlso <https://iiif.io/api/presentation/3.0/#behavior> ;
+     rdfs:isDefinedBy utk: .
+
+utk:Paged a utk:Behavior ;
+    rdfs:label "paged"@en ;
+    rdfs:seeAlso <https://iiif.io/api/presentation/3.0/#behavior> ;
+    rdfs:comment """
+    Valid on Collections, Manifests and Ranges, which include Canvases that have at least height and width dimensions.
+    Canvases included in resources that have this behavior represent views that should be presented in a page-turning
+    interface if one is available. The first canvas is a single view (the first recto) and thus the second canvas likely
+    represents the back of the object in the first canvas. If this is not the case, see the behavior value non-paged.
+    Disjoint with unordered, individuals, continuous, facing-pages and non-paged.
+    """@en .
+
+utk:Unordered a utk:Behavior ;
+    rdfs:label "unordered"@en ;
+    rdfs:seeAlso <https://iiif.io/api/presentation/3.0/#behavior> ;
+    rdfs:comment """
+    Valid on Collections, Manifests and Ranges. The Canvases included in resources that have this behavior have no
+    inherent order, and user interfaces should avoid implying an order to the user. Disjoint with individuals,
+    continuous, and paged.
+    """@en .
+
+utk: dcterms:modified "2022-07-02"^^xsd:date ;
+    dcterms:publisher <http://www.lib.utk.edu/> ;
+    dcterms:title "University of Tennessee Digital Initiatives Files and Works Ontology"@en ;
+    rdfs:comment """
+    Ontology for the the University of Tennessee Libraries to state relationships about files or works when other
+    ontologies can't be used."""@en ;
+    rdfs:seeAlso <https://github.com/utkdigitalinitiatives/utk_ontology/> ;
+    owl:versionInfo "2022/07/02" .
