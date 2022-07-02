@@ -1,1 +1,1 @@
-web: gunicorn ontologies.py
+web: gunicorn ontologies:app
