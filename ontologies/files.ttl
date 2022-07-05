@@ -3,7 +3,7 @@
 @prefix pcdm:  <http://pcdm.org/models#> .
 @prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix utk: <https://digital.lib.utk.edu/ontology/files#> .
+@prefix utk: <https://ontology.lib.utk.edu/works#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 utk:hasBehavior a rdf:Property ;
@@ -43,7 +43,8 @@ utk: dcterms:modified "2022-07-02"^^xsd:date ;
     dcterms:publisher <http://www.lib.utk.edu/> ;
     dcterms:title "University of Tennessee Digital Initiatives Files and Works Ontology"@en ;
     rdfs:comment """
-    Ontology for the the University of Tennessee Libraries to state relationships about files or works when other
-    ontologies can't be used."""@en ;
+    Ontology for the the University of Tennessee Libraries to state relationships about works and the files they consist
+    of.  This ontology does not intend to supersede more established ontologies but instead exists to state relationships
+    when established properties cannot be identified.."""@en ;
     rdfs:seeAlso <https://github.com/utkdigitalinitiatives/utk_ontology/> ;
-    owl:versionInfo "2022/07/02" .
+    owl:versionInfo "2022/07/05" .
