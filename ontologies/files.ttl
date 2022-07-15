@@ -18,6 +18,8 @@ utk:hasVideoThumbnail a rdf:Property ;
     rdfs:label "has video thumbnail"@en ;
     rdfs:comment "Links a Video file to a short clip that represents the resource via a temporal media fragment."@en ;
     rdfs:domain pcdmff:Video ;
+    rdfs:range rdfs:Literal;
+    rdfs:seeAlso <https://www.w3.org/TR/media-frags/#naming-time> ;
     rdfs:isDefinedBy utk: .
 
 utk:Behavior a rdfs:Class ;
