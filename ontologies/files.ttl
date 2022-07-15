@@ -1,6 +1,7 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix pcdm:  <http://pcdm.org/models#> .
+@prefix pcdmff: <http://pcdm.org/file-format-types#> .
 @prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix utk: <https://ontology.lib.utk.edu/works#> .
@@ -11,6 +12,14 @@ utk:hasBehavior a rdf:Property ;
     rdfs:comment "Links a pcdm:Object to a specific IIIF presentation behavior."@en ;
     rdfs:range utk:Behavior ;
     rdfs:domain pcdm:Object ;
+    rdfs:isDefinedBy utk: .
+
+utk:hasVideoThumbnail a rdf:Property ;
+    rdfs:label "has video thumbnail"@en ;
+    rdfs:comment "Links a Video file to a short clip that represents the resource via a temporal media fragment."@en ;
+    rdfs:domain pcdmff:Video ;
+    rdfs:range rdfs:Literal;
+    rdfs:seeAlso <https://www.w3.org/TR/media-frags/#naming-time> ;
     rdfs:isDefinedBy utk: .
 
 utk:Behavior a rdfs:Class ;
