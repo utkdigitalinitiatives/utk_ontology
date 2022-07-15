@@ -28,6 +28,16 @@ utk:Behavior a rdfs:Class ;
      rdfs:seeAlso <https://iiif.io/api/presentation/3.0/#behavior> ;
      rdfs:isDefinedBy utk: .
 
+utk:NonPaged a utk:Behavior ;
+    rdfs:label "non-paged"@en ;
+    rdfs:seeAlso <https://iiif.io/api/presentation/3.0/#behavior> ;
+    rdfs:comment """
+    Valid only on Canvases, where the Canvas has at least height and width dimensions. Canvases that have this behavior
+    must not be presented in a page turning interface, and must be skipped over when determining the page order. This
+    behavior must be ignored if the current Manifest does not have the behavior value paged. Disjoint with paged and
+    facing-pages.
+    """@en .
+
 utk:Paged a utk:Behavior ;
     rdfs:label "paged"@en ;
     rdfs:seeAlso <https://iiif.io/api/presentation/3.0/#behavior> ;
@@ -37,6 +47,8 @@ utk:Paged a utk:Behavior ;
     interface if one is available. The first canvas is a single view (the first recto) and thus the second canvas likely
     represents the back of the object in the first canvas. If this is not the case, see the behavior value non-paged.
     Disjoint with unordered, individuals, continuous, facing-pages and non-paged.
+
+
     """@en .
 
 utk:Unordered a utk:Behavior ;
