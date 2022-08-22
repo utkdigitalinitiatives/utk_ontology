@@ -8,8 +8,10 @@ authors = ["Mark Baggett <mbagget1@utk.edu>"]
 python = "3.10.4"
 Flask = "^2.1.2"
 flask_rdf = "^0.2.1"
-rdflib = "^4.1.1"
+rdflib = "^6.1.1"
 gunicorn = "^20.1.0"
+requests = "^2.28.1"
+rdflib-jsonld = "^0.6.2"
 
 [tool.poetry.dev-dependencies]
 
