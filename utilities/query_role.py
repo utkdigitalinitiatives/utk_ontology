@@ -26,9 +26,9 @@ class RoleBuilder:
         g.bind("relators", "http://id.loc.gov/vocabulary/relators/")
         g.add((URIRef(subject), RDF.type, RDF.Property))
         for s, p, o in full_graph:
-            if p.strip() == "http://www.w3.org/2004/02/skos/core#prefLabel":
+            if p.strip() == "http://www.w3.org/2004/02/skos/core#prefLabel" and s.strip() == self.uri:
                 g.add((URIRef(subject), SKOS.prefLabel, Literal(o)))
-            if p.strip() == "http://www.w3.org/2004/02/skos/core#definition":
+            if p.strip() == "http://www.w3.org/2004/02/skos/core#definition" and s.strip() == self.uri:
                 g.add((URIRef(subject), SKOS.definition, Literal(o)))
         g.add((URIRef(subject), SKOS.closeMatch, URIRef(self.uri)))
         g.add((URIRef(subject), RDFS.range, RDFS.Literal))
@@ -59,6 +59,4 @@ class OntologyGenerator:
 
 
 if __name__ == "__main__":
-    # x = RoleBuilder('http://id.loc.gov/vocabulary/relators/cph').build()
-    # print(x)
-    x = OntologyGenerator('test.ttl').write_ontology('tests/roles.txt')
+    OntologyGenerator('test.ttl').write_ontology('tests/roles.txt')
