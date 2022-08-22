@@ -33,9 +33,32 @@ class RoleBuilder:
         g.add((URIRef(subject), SKOS.closeMatch, URIRef(self.uri)))
         g.add((URIRef(subject), RDFS.range, RDFS.Literal))
         g.add((URIRef(subject), RDFS.subPropertyOf, DC.contributor))
-        return g.serialize()
+        return g
+
+
+class OntologyGenerator:
+    def __init__(self, output):
+        self.filename = output
+
+    def write_ontology(self, input):
+        g = Graph()
+        g.bind("skos", SKOS)
+        g.bind("utk", "https://ontology.lib.utk.edu/roles#")
+        g.bind("dc", "http://purl.org/dc/elements/1.1/")
+        g.bind("relators", "http://id.loc.gov/vocabulary/relators/")
+        with open(input, 'r') as my_input:
+            for line in my_input:
+                role = RoleBuilder(line.strip()).build()
+                for thing in role:
+                    g.add(thing)
+        with open(f"ontologies/{self.filename}", "wb") as rdf:
+            rdf.write(
+                g.serialize(format='turtle', indent=4).encode("utf-8")
+            )
+        return
 
 
 if __name__ == "__main__":
-    x = RoleBuilder('http://id.loc.gov/vocabulary/relators/cph').build()
-    print(x)
+    # x = RoleBuilder('http://id.loc.gov/vocabulary/relators/cph').build()
+    # print(x)
+    x = OntologyGenerator('test.ttl').write_ontology('tests/roles.txt')
