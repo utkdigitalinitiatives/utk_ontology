@@ -102,6 +102,54 @@ utk:chr a rdf:Property ;
     rdfs:range rdfs:Literal;
     rdfs:isDefinedBy utk: .
 
+utk:cli a rdf:Property ;
+    skos:prefLabel "Client" ;
+    rdfs:subPropertyOf dc:contributor ;
+    skos:definition "A person or organization for whom another person or organization is acting"@en ;
+    skos:closeMatch "http://id.loc.gov/vocabulary/relators/cli" ;
+    rdfs:range rdfs:Literal;
+    rdfs:isDefinedBy utk: .
+
+utk:com a rdf:Property ;
+    skos:prefLabel "Compiler" ;
+    rdfs:subPropertyOf dc:contributor ;
+    skos:definition "A person, family, or organization responsible for creating a new work (e.g., a bibliography, a directory) through the act of compilation, e.g., selecting, arranging, aggregating, and editing data, information, etc."@en ;
+    skos:closeMatch "http://id.loc.gov/vocabulary/relators/com" ;
+    rdfs:range rdfs:Literal;
+    rdfs:isDefinedBy utk: .
+
+utk:cmp a rdf:Property ;
+    skos:prefLabel "Composer" ;
+    rdfs:subPropertyOf dc:contributor ;
+    skos:definition "A person, family, or organization responsible for creating or contributing to a musical resource by adding music to a work that originally lacked it or supplements it"@en ;
+    skos:closeMatch "http://id.loc.gov/vocabulary/relators/cmp" ;
+    rdfs:range rdfs:Literal;
+    rdfs:isDefinedBy utk: .
+
+utk:ctr a rdf:Property ;
+    skos:prefLabel "Contractor" ;
+    rdfs:subPropertyOf dc:contributor ;
+    skos:definition "A person or organization relevant to a resource, who enters into a contract with another person or organization to perform a specific"@en ;
+    skos:closeMatch "http://id.loc.gov/vocabulary/relators/ctr" ;
+    rdfs:range rdfs:Literal;
+    rdfs:isDefinedBy utk: .
+
+utk:ctb a rdf:Property ;
+    skos:prefLabel "Contributor" ;
+    rdfs:subPropertyOf dc:contributor ;
+    skos:definition "A person, family or organization responsible for making contributions to the resource. This includes those whose work has been contributed to a larger work, such as an anthology, serial publication, or other compilation of individual works. If a more specific role is available, prefer that, e.g. editor, compiler, illustrator"@en ;
+    skos:closeMatch "http://id.loc.gov/vocabulary/relators/ctb" ;
+    rdfs:range rdfs:Literal;
+    rdfs:isDefinedBy utk: .
+
+utk:cph a rdf:Property ;
+    skos:prefLabel "Copyright holder" ;
+    rdfs:subPropertyOf dc:contributor ;
+    skos:definition "A person or organization to whom copy and legal rights have been granted or transferred for the intellectual content of a work. The copyright holder, although not necessarily the creator of the work, usually has the exclusive right to benefit financially from the sale and use of the work to which the associated copyright protection applies"@en ;
+    skos:closeMatch "http://id.loc.gov/vocabulary/relators/cph" ;
+    rdfs:range rdfs:Literal;
+    rdfs:isDefinedBy utk: .
+
 utk: dcterms:modified "2022-08-20"^^xsd:date ;
     dcterms:publisher <http://www.lib.utk.edu/> ;
     dcterms:title "University of Tennessee Digital Initiatives Role Terms Ontology"@en ;
