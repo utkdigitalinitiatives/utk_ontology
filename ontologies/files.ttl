@@ -47,8 +47,6 @@ utk:Paged a utk:Behavior ;
     interface if one is available. The first canvas is a single view (the first recto) and thus the second canvas likely
     represents the back of the object in the first canvas. If this is not the case, see the behavior value non-paged.
     Disjoint with unordered, individuals, continuous, facing-pages and non-paged.
-
-
     """@en .
 
 utk:Unordered a utk:Behavior ;
