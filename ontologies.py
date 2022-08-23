@@ -6,8 +6,15 @@ from flask_rdf.flask import returns_rdf
 app = Flask(__name__)
 
 
-@app.route('/files')
+@app.route('/roles')
 @app.route('/<path:path>')
+@returns_rdf
+def roles(path=''):
+  g = Graph()
+  g.parse("ontologies/roles.ttl", format='ttl')
+  return g
+
+@app.route('/files')
 @returns_rdf
 def files(path=''):
   g = Graph()
