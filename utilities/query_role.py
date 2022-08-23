@@ -19,7 +19,7 @@ class RoleBuilder:
 
     def build(self):
         full_graph = Graph().parse(data=self.data, format="json-ld")
-        subject = f"https://ontology.lib.utk.edu/roles#{self.uri.split('/')[-1]}"
+        subject = f"https://utk-ontologies.herokuapp.com/roles#{self.uri.split('/')[-1]}"
         g = Graph()
         g.add((URIRef(subject), RDF.type, RDF.Property))
         for s, p, o in full_graph:
@@ -30,7 +30,7 @@ class RoleBuilder:
         g.add((URIRef(subject), SKOS.closeMatch, URIRef(self.uri)))
         g.add((URIRef(subject), RDFS.range, RDFS.Literal))
         g.add((URIRef(subject), RDFS.subPropertyOf, DC.contributor))
-        g.add((URIRef(subject), RDFS.isDefinedBy, URIRef("https://ontology.lib.utk.edu/roles#")))
+        g.add((URIRef(subject), RDFS.isDefinedBy, URIRef("https://utk-ontologies.herokuapp.com/roles#")))
         return g
 
 
@@ -41,7 +41,7 @@ class OntologyGenerator:
     def write_ontology(self, input):
         g = Graph()
         g.bind("skos", SKOS)
-        g.bind("utk", "https://ontology.lib.utk.edu/roles#")
+        g.bind("utk", "https://utk-ontologies.herokuapp.com/roles#")
         g.bind("dc", "http://purl.org/dc/elements/1.1/")
         g.bind("dcterms", "http://purl.org/dc/terms/")
         g.bind("relators", "http://id.loc.gov/vocabulary/relators/")
@@ -64,14 +64,14 @@ class OntologyGenerator:
         g = Graph()
         date = arrow.utcnow().format('YYYY-MM-DD')
         comment = "Ontology for the the University of Tennessee Libraries to state relationships between people and works.  This ontology exists because m3 profiles defined by Houndstooth cannot support both URIs and strings.  For that reason, this ontology exists and closely follows marcrelators.  The key difference is that this ontology is defined to work with values that are strings only."
-        g.add((URIRef('https://ontology.lib.utk.edu/roles#'), DCTERMS.modified, Literal(date, datatype=XSD.date)))
-        g.add((URIRef('https://ontology.lib.utk.edu/roles#'), RDFS.comment, Literal(comment, lang='en')))
-        g.add((URIRef('https://ontology.lib.utk.edu/roles#'), DCTERMS.publisher, URIRef('http://www.lib.utk.edu/')))
-        g.add((URIRef('https://ontology.lib.utk.edu/roles#'), DCTERMS.title, Literal('University of Tennessee Digital Initiatives Role Terms Ontology', lang='en')))
-        g.add((URIRef('https://ontology.lib.utk.edu/roles#'), RDFS.seeAlso, URIRef('https://github.com/utkdigitalinitiatives/utk_ontology/')))
-        g.add((URIRef('https://ontology.lib.utk.edu/roles#'), OWL.versionInfo, Literal(date, datatype=XSD.date)))
+        g.add((URIRef('https://utk-ontologies.herokuapp.com/roles#'), DCTERMS.modified, Literal(date, datatype=XSD.date)))
+        g.add((URIRef('https://utk-ontologies.herokuapp.com/roles#'), RDFS.comment, Literal(comment, lang='en')))
+        g.add((URIRef('https://utk-ontologies.herokuapp.com/roles#'), DCTERMS.publisher, URIRef('http://www.lib.utk.edu/')))
+        g.add((URIRef('https://utk-ontologies.herokuapp.com/roles#'), DCTERMS.title, Literal('University of Tennessee Digital Initiatives Role Terms Ontology', lang='en')))
+        g.add((URIRef('https://utk-ontologies.herokuapp.com/roles#'), RDFS.seeAlso, URIRef('https://github.com/utkdigitalinitiatives/utk_ontology/')))
+        g.add((URIRef('https://utk-ontologies.herokuapp.com/roles#'), OWL.versionInfo, Literal(date, datatype=XSD.date)))
         return g
 
 
 if __name__ == "__main__":
-    OntologyGenerator('test.ttl').write_ontology('tests/roles.txt')
+    OntologyGenerator('roles.ttl').write_ontology('tests/roles.txt')
