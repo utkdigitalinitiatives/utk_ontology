@@ -24,7 +24,7 @@ class RoleBuilder:
         g.add((URIRef(subject), RDF.type, RDF.Property))
         for s, p, o in full_graph:
             if p.strip() == "http://www.w3.org/2004/02/skos/core#prefLabel" and s.strip() == self.uri:
-                g.add((URIRef(subject), SKOS.prefLabel, Literal(f"Local {o}")))
+                g.add((URIRef(subject), SKOS.prefLabel, Literal(f"Local {o.lower()}")))
             if p.strip() == "http://www.w3.org/2004/02/skos/core#definition" and s.strip() == self.uri:
                 g.add((URIRef(subject), SKOS.definition, Literal(o)))
         g.add((URIRef(subject), SKOS.closeMatch, URIRef(self.uri)))
