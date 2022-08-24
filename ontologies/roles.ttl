@@ -14,7 +14,7 @@ utk:arc a rdf:Property ;
     rdfs:subPropertyOf dc:contributor ;
     skos:closeMatch relators:arc ;
     skos:definition "A person, family, or organization responsible for creating an architectural design, including a pictorial representation intended to show how a building, etc., will look when completed. It also oversees the construction of structures"@en ;
-    skos:prefLabel "Architect" .
+    skos:prefLabel "Local Architect" .
 
 utk:arr a rdf:Property ;
     rdfs:isDefinedBy utk: ;
@@ -22,7 +22,7 @@ utk:arr a rdf:Property ;
     rdfs:subPropertyOf dc:contributor ;
     skos:closeMatch relators:arr ;
     skos:definition "A person, family, or organization contributing to a musical work by rewriting the composition for a medium of performance different from that for which the work was originally intended, or modifying the work for the same medium of performance, etc., such that the musical substance of the original composition remains essentially unchanged. For extensive modification that effectively results in the creation of a new musical work, see composer"@en ;
-    skos:prefLabel "Arranger" .
+    skos:prefLabel "Local Arranger" .
 
 utk:art a rdf:Property ;
     rdfs:isDefinedBy utk: ;
@@ -30,7 +30,7 @@ utk:art a rdf:Property ;
     rdfs:subPropertyOf dc:contributor ;
     skos:closeMatch relators:art ;
     skos:definition "A person, family, or organization responsible for creating a work by conceiving, and implementing, an original graphic design, drawing, painting, etc. For book illustrators, prefer Illustrator [ill]"@en ;
-    skos:prefLabel "Artist" .
+    skos:prefLabel "Local Artist" .
 
 utk:asn a rdf:Property ;
     rdfs:isDefinedBy utk: ;
@@ -38,7 +38,7 @@ utk:asn a rdf:Property ;
     rdfs:subPropertyOf dc:contributor ;
     skos:closeMatch relators:asn ;
     skos:definition "A person or organization associated with or found in an item or collection, which cannot be determined to be that of a Former owner [fmo] or other designated relationship indicative of provenance"@en ;
-    skos:prefLabel "Associated name" .
+    skos:prefLabel "Local Associated name" .
 
 utk:ato a rdf:Property ;
     rdfs:isDefinedBy utk: ;
@@ -46,7 +46,7 @@ utk:ato a rdf:Property ;
     rdfs:subPropertyOf dc:contributor ;
     skos:closeMatch relators:ato ;
     skos:definition "A person whose manuscript signature appears on an item"@en ;
-    skos:prefLabel "Autographer" .
+    skos:prefLabel "Local Autographer" .
 
 utk:att a rdf:Property ;
     rdfs:isDefinedBy utk: ;
@@ -54,7 +54,7 @@ utk:att a rdf:Property ;
     rdfs:subPropertyOf dc:contributor ;
     skos:closeMatch relators:att ;
     skos:definition "An author, artist, etc., relating him/her to a resource for which there is or once was substantial authority for designating that person as author, creator, etc. of the work"@en ;
-    skos:prefLabel "Attributed name" .
+    skos:prefLabel "Local Attributed name" .
 
 utk:aut a rdf:Property ;
     rdfs:isDefinedBy utk: ;
@@ -62,7 +62,7 @@ utk:aut a rdf:Property ;
     rdfs:subPropertyOf dc:contributor ;
     skos:closeMatch relators:aut ;
     skos:definition "A person, family, or organization responsible for creating a work that is primarily textual in content, regardless of media type (e.g., printed text, spoken word, electronic text, tactile text) or genre (e.g., poems, novels, screenplays, blogs). Use also for persons, etc., creating a new work by paraphrasing, rewriting, or adapting works by another creator such that the modification has substantially changed the nature and content of the original or changed the medium of expression"@en ;
-    skos:prefLabel "Author" .
+    skos:prefLabel "Local Author" .
 
 utk:bdd a rdf:Property ;
     rdfs:isDefinedBy utk: ;
@@ -70,7 +70,7 @@ utk:bdd a rdf:Property ;
     rdfs:subPropertyOf dc:contributor ;
     skos:closeMatch relators:bdd ;
     skos:definition "A person or organization responsible for the binding design of a book, including the type of binding, the type of materials used, and any decorative aspects of the binding"@en ;
-    skos:prefLabel "Binding designer" .
+    skos:prefLabel "Local Binding designer" .
 
 utk:chr a rdf:Property ;
     rdfs:isDefinedBy utk: ;
@@ -78,7 +78,7 @@ utk:chr a rdf:Property ;
     rdfs:subPropertyOf dc:contributor ;
     skos:closeMatch relators:chr ;
     skos:definition "A person responsible for creating or contributing to a work of movement"@en ;
-    skos:prefLabel "Choreographer" .
+    skos:prefLabel "Local Choreographer" .
 
 utk:cli a rdf:Property ;
     rdfs:isDefinedBy utk: ;
@@ -86,7 +86,7 @@ utk:cli a rdf:Property ;
     rdfs:subPropertyOf dc:contributor ;
     skos:closeMatch relators:cli ;
     skos:definition "A person or organization for whom another person or organization is acting"@en ;
-    skos:prefLabel "Client" .
+    skos:prefLabel "Local Client" .
 
 utk:cmp a rdf:Property ;
     rdfs:isDefinedBy utk: ;
@@ -94,7 +94,7 @@ utk:cmp a rdf:Property ;
     rdfs:subPropertyOf dc:contributor ;
     skos:closeMatch relators:cmp ;
     skos:definition "A person, family, or organization responsible for creating or contributing to a musical resource by adding music to a work that originally lacked it or supplements it"@en ;
-    skos:prefLabel "Composer" .
+    skos:prefLabel "Local Composer" .
 
 utk:cns a rdf:Property ;
     rdfs:isDefinedBy utk: ;
@@ -102,7 +102,7 @@ utk:cns a rdf:Property ;
     rdfs:subPropertyOf dc:contributor ;
     skos:closeMatch relators:cns ;
     skos:definition "A person or organization who examines bibliographic resources for the purpose of suppressing parts deemed objectionable on moral, political, military, or other grounds"@en ;
-    skos:prefLabel "Censor" .
+    skos:prefLabel "Local Censor" .
 
 utk:com a rdf:Property ;
     rdfs:isDefinedBy utk: ;
@@ -110,7 +110,7 @@ utk:com a rdf:Property ;
     rdfs:subPropertyOf dc:contributor ;
     skos:closeMatch relators:com ;
     skos:definition "A person, family, or organization responsible for creating a new work (e.g., a bibliography, a directory) through the act of compilation, e.g., selecting, arranging, aggregating, and editing data, information, etc."@en ;
-    skos:prefLabel "Compiler" .
+    skos:prefLabel "Local Compiler" .
 
 utk:cph a rdf:Property ;
     rdfs:isDefinedBy utk: ;
@@ -118,7 +118,7 @@ utk:cph a rdf:Property ;
     rdfs:subPropertyOf dc:contributor ;
     skos:closeMatch relators:cph ;
     skos:definition "A person or organization to whom copy and legal rights have been granted or transferred for the intellectual content of a work. The copyright holder, although not necessarily the creator of the work, usually has the exclusive right to benefit financially from the sale and use of the work to which the associated copyright protection applies"@en ;
-    skos:prefLabel "Copyright holder" .
+    skos:prefLabel "Local Copyright holder" .
 
 utk:cre a rdf:Property ;
     rdfs:isDefinedBy utk: ;
@@ -126,7 +126,7 @@ utk:cre a rdf:Property ;
     rdfs:subPropertyOf dc:contributor ;
     skos:closeMatch relators:cre ;
     skos:definition "A person or organization responsible for the intellectual or artistic content of a resource"@en ;
-    skos:prefLabel "Creator" .
+    skos:prefLabel "Local Creator" .
 
 utk:crp a rdf:Property ;
     rdfs:isDefinedBy utk: ;
@@ -134,7 +134,7 @@ utk:crp a rdf:Property ;
     rdfs:subPropertyOf dc:contributor ;
     skos:closeMatch relators:crp ;
     skos:definition "A person or organization who was either the writer or recipient of a letter or other communication"@en ;
-    skos:prefLabel "Correspondent" .
+    skos:prefLabel "Local Correspondent" .
 
 utk:cst a rdf:Property ;
     rdfs:isDefinedBy utk: ;
@@ -142,7 +142,7 @@ utk:cst a rdf:Property ;
     rdfs:subPropertyOf dc:contributor ;
     skos:closeMatch relators:cst ;
     skos:definition "A person, family, or organization that designs the costumes for a moving image production or for a musical or dramatic presentation or entertainment"@en ;
-    skos:prefLabel "Costume designer" .
+    skos:prefLabel "Local Costume designer" .
 
 utk:ctb a rdf:Property ;
     rdfs:isDefinedBy utk: ;
@@ -150,7 +150,7 @@ utk:ctb a rdf:Property ;
     rdfs:subPropertyOf dc:contributor ;
     skos:closeMatch relators:ctb ;
     skos:definition "A person, family or organization responsible for making contributions to the resource. This includes those whose work has been contributed to a larger work, such as an anthology, serial publication, or other compilation of individual works. If a more specific role is available, prefer that, e.g. editor, compiler, illustrator"@en ;
-    skos:prefLabel "Contributor" .
+    skos:prefLabel "Local Contributor" .
 
 utk:ctg a rdf:Property ;
     rdfs:isDefinedBy utk: ;
@@ -158,7 +158,7 @@ utk:ctg a rdf:Property ;
     rdfs:subPropertyOf dc:contributor ;
     skos:closeMatch relators:ctg ;
     skos:definition "A person, family, or organization responsible for creating a map, atlas, globe, or other cartographic work"@en ;
-    skos:prefLabel "Cartographer" .
+    skos:prefLabel "Local Cartographer" .
 
 utk:ctr a rdf:Property ;
     rdfs:isDefinedBy utk: ;
@@ -166,7 +166,7 @@ utk:ctr a rdf:Property ;
     rdfs:subPropertyOf dc:contributor ;
     skos:closeMatch relators:ctr ;
     skos:definition "A person or organization relevant to a resource, who enters into a contract with another person or organization to perform a specific"@en ;
-    skos:prefLabel "Contractor" .
+    skos:prefLabel "Local Contractor" .
 
 utk:dnr a rdf:Property ;
     rdfs:isDefinedBy utk: ;
@@ -174,7 +174,7 @@ utk:dnr a rdf:Property ;
     rdfs:subPropertyOf dc:contributor ;
     skos:closeMatch relators:dnr ;
     skos:definition "A former owner of an item who donated that item to another owner"@en ;
-    skos:prefLabel "Donor" .
+    skos:prefLabel "Local Donor" .
 
 utk:dpc a rdf:Property ;
     rdfs:isDefinedBy utk: ;
@@ -182,7 +182,7 @@ utk:dpc a rdf:Property ;
     rdfs:subPropertyOf dc:contributor ;
     skos:closeMatch relators:dpc ;
     skos:definition "An entity depicted or portrayed in a work, particularly in a work of art"@en ;
-    skos:prefLabel "Depicted" .
+    skos:prefLabel "Local Depicted" .
 
 utk:dsr a rdf:Property ;
     rdfs:isDefinedBy utk: ;
@@ -190,7 +190,7 @@ utk:dsr a rdf:Property ;
     rdfs:subPropertyOf dc:contributor ;
     skos:closeMatch relators:dsr ;
     skos:definition "A person, family, or organization responsible for creating a design for an object"@en ;
-    skos:prefLabel "Designer" .
+    skos:prefLabel "Local Designer" .
 
 utk:dst a rdf:Property ;
     rdfs:isDefinedBy utk: ;
@@ -198,7 +198,7 @@ utk:dst a rdf:Property ;
     rdfs:subPropertyOf dc:contributor ;
     skos:closeMatch relators:dst ;
     skos:definition "A person or organization that has exclusive or shared marketing rights for a resource"@en ;
-    skos:prefLabel "Distributor" .
+    skos:prefLabel "Local Distributor" .
 
 utk:dte a rdf:Property ;
     rdfs:isDefinedBy utk: ;
@@ -206,7 +206,7 @@ utk:dte a rdf:Property ;
     rdfs:subPropertyOf dc:contributor ;
     skos:closeMatch relators:dte ;
     skos:definition "A person, family, or organization to whom a resource is dedicated"@en ;
-    skos:prefLabel "Dedicatee" .
+    skos:prefLabel "Local Dedicatee" .
 
 utk:edc a rdf:Property ;
     rdfs:isDefinedBy utk: ;
@@ -214,7 +214,7 @@ utk:edc a rdf:Property ;
     rdfs:subPropertyOf dc:contributor ;
     skos:closeMatch relators:edc ;
     skos:definition "A person, family, or organization contributing to a collective or aggregate work by selecting and putting together works, or parts of works, by one or more creators. For compilations of data, information, etc., that result in new works, see compiler"@en ;
-    skos:prefLabel "Editor of compilation" .
+    skos:prefLabel "Local Editor of compilation" .
 
 utk:edt a rdf:Property ;
     rdfs:isDefinedBy utk: ;
@@ -222,7 +222,7 @@ utk:edt a rdf:Property ;
     rdfs:subPropertyOf dc:contributor ;
     skos:closeMatch relators:edt ;
     skos:definition "A person, family, or organization contributing to a resource by revising or elucidating the content, e.g., adding an introduction, notes, or other critical matter. An editor may also prepare a resource for production, publication, or distribution. For major revisions, adaptations, etc., that substantially change the nature and content of the original work, resulting in a new work, see author"@en ;
-    skos:prefLabel "Editor" .
+    skos:prefLabel "Local Editor" .
 
 utk:egr a rdf:Property ;
     rdfs:isDefinedBy utk: ;
@@ -230,7 +230,7 @@ utk:egr a rdf:Property ;
     rdfs:subPropertyOf dc:contributor ;
     skos:closeMatch relators:egr ;
     skos:definition "A person or organization who cuts letters, figures, etc. on a surface, such as a wooden or metal plate used for printing"@en ;
-    skos:prefLabel "Engraver" .
+    skos:prefLabel "Local Engraver" .
 
 utk:fmo a rdf:Property ;
     rdfs:isDefinedBy utk: ;
@@ -238,7 +238,7 @@ utk:fmo a rdf:Property ;
     rdfs:subPropertyOf dc:contributor ;
     skos:closeMatch relators:fmo ;
     skos:definition "A person, family, or organization formerly having legal possession of an item"@en ;
-    skos:prefLabel "Former owner" .
+    skos:prefLabel "Local Former owner" .
 
 utk:his a rdf:Property ;
     rdfs:isDefinedBy utk: ;
@@ -246,7 +246,7 @@ utk:his a rdf:Property ;
     rdfs:subPropertyOf dc:contributor ;
     skos:closeMatch relators:his ;
     skos:definition "An organization hosting the event, exhibit, conference, etc., which gave rise to a resource, but having little or no responsibility for the content of the resource"@en ;
-    skos:prefLabel "Host institution" .
+    skos:prefLabel "Local Host institution" .
 
 utk:hnr a rdf:Property ;
     rdfs:isDefinedBy utk: ;
@@ -254,7 +254,7 @@ utk:hnr a rdf:Property ;
     rdfs:subPropertyOf dc:contributor ;
     skos:closeMatch relators:hnr ;
     skos:definition "A person, family, or organization honored by a work or item (e.g., the honoree of a festschrift, a person to whom a copy is presented)"@en ;
-    skos:prefLabel "Honoree" .
+    skos:prefLabel "Local Honoree" .
 
 utk:ill a rdf:Property ;
     rdfs:isDefinedBy utk: ;
@@ -262,7 +262,7 @@ utk:ill a rdf:Property ;
     rdfs:subPropertyOf dc:contributor ;
     skos:closeMatch relators:ill ;
     skos:definition "A person, family, or organization contributing to a resource by supplementing the primary content with drawings, diagrams, photographs, etc. If the work is primarily the artistic content created by this entity, use artist or photographer"@en ;
-    skos:prefLabel "Illustrator" .
+    skos:prefLabel "Local Illustrator" .
 
 utk:isb a rdf:Property ;
     rdfs:isDefinedBy utk: ;
@@ -270,7 +270,7 @@ utk:isb a rdf:Property ;
     rdfs:subPropertyOf dc:contributor ;
     skos:closeMatch relators:isb ;
     skos:definition "A person, family or organization issuing a work, such as an official organ of the body"@en ;
-    skos:prefLabel "Issuing body" .
+    skos:prefLabel "Local Issuing body" .
 
 utk:itr a rdf:Property ;
     rdfs:isDefinedBy utk: ;
@@ -278,7 +278,7 @@ utk:itr a rdf:Property ;
     rdfs:subPropertyOf dc:contributor ;
     skos:closeMatch relators:itr ;
     skos:definition "A performer contributing to a resource by playing a musical instrument"@en ;
-    skos:prefLabel "Instrumentalist" .
+    skos:prefLabel "Local Instrumentalist" .
 
 utk:ive a rdf:Property ;
     rdfs:isDefinedBy utk: ;
@@ -286,7 +286,7 @@ utk:ive a rdf:Property ;
     rdfs:subPropertyOf dc:contributor ;
     skos:closeMatch relators:ive ;
     skos:definition "A person, family or organization responsible for creating or contributing to a resource by responding to an interviewer, usually a reporter, pollster, or some other information gathering agent"@en ;
-    skos:prefLabel "Interviewee" .
+    skos:prefLabel "Local Interviewee" .
 
 utk:ivr a rdf:Property ;
     rdfs:isDefinedBy utk: ;
@@ -294,7 +294,7 @@ utk:ivr a rdf:Property ;
     rdfs:subPropertyOf dc:contributor ;
     skos:closeMatch relators:ivr ;
     skos:definition "A person, family, or organization responsible for creating or contributing to a resource by acting as an interviewer, reporter, pollster, or some other information gathering agent"@en ;
-    skos:prefLabel "Interviewer" .
+    skos:prefLabel "Local Interviewer" .
 
 utk:ltg a rdf:Property ;
     rdfs:isDefinedBy utk: ;
@@ -302,7 +302,7 @@ utk:ltg a rdf:Property ;
     rdfs:subPropertyOf dc:contributor ;
     skos:closeMatch relators:ltg ;
     skos:definition "A person or organization who prepares the stone or plate for lithographic printing, including a graphic artist creating a design directly on the surface from which printing will be done."@en ;
-    skos:prefLabel "Lithographer" .
+    skos:prefLabel "Local Lithographer" .
 
 utk:lyr a rdf:Property ;
     rdfs:isDefinedBy utk: ;
@@ -310,7 +310,7 @@ utk:lyr a rdf:Property ;
     rdfs:subPropertyOf dc:contributor ;
     skos:closeMatch relators:lyr ;
     skos:definition "An author of the words of a non-dramatic musical work (e.g. the text of a song), except for oratorios"@en ;
-    skos:prefLabel "Lyricist" .
+    skos:prefLabel "Local Lyricist" .
 
 utk:mcp a rdf:Property ;
     rdfs:isDefinedBy utk: ;
@@ -318,7 +318,7 @@ utk:mcp a rdf:Property ;
     rdfs:subPropertyOf dc:contributor ;
     skos:closeMatch relators:mcp ;
     skos:definition "A person who transcribes or copies musical notation"@en ;
-    skos:prefLabel "Music copyist" .
+    skos:prefLabel "Local Music copyist" .
 
 utk:msd a rdf:Property ;
     rdfs:isDefinedBy utk: ;
@@ -326,7 +326,7 @@ utk:msd a rdf:Property ;
     rdfs:subPropertyOf dc:contributor ;
     skos:closeMatch relators:msd ;
     skos:definition "A person who coordinates the activities of the composer, the sound editor, and sound mixers for a moving image production or for a musical or dramatic presentation or entertainment"@en ;
-    skos:prefLabel "Musical director" .
+    skos:prefLabel "Local Musical director" .
 
 utk:org a rdf:Property ;
     rdfs:isDefinedBy utk: ;
@@ -334,7 +334,7 @@ utk:org a rdf:Property ;
     rdfs:subPropertyOf dc:contributor ;
     skos:closeMatch relators:org ;
     skos:definition "A person or organization performing the work, i.e., the name of a person or organization associated with the intellectual content of the work. This category does not include the publisher or personal affiliation, or sponsor except where it is also the corporate author"@en ;
-    skos:prefLabel "Originator" .
+    skos:prefLabel "Local Originator" .
 
 utk:orm a rdf:Property ;
     rdfs:isDefinedBy utk: ;
@@ -342,7 +342,7 @@ utk:orm a rdf:Property ;
     rdfs:subPropertyOf dc:contributor ;
     skos:closeMatch relators:orm ;
     skos:definition "A person, family, or organization organizing the exhibit, event, conference, etc., which gave rise to a resource"@en ;
-    skos:prefLabel "Organizer" .
+    skos:prefLabel "Local Organizer" .
 
 utk:own a rdf:Property ;
     rdfs:isDefinedBy utk: ;
@@ -350,7 +350,7 @@ utk:own a rdf:Property ;
     rdfs:subPropertyOf dc:contributor ;
     skos:closeMatch relators:own ;
     skos:definition "A person, family, or organization that currently owns an item or collection, i.e.has legal possession of a resource"@en ;
-    skos:prefLabel "Owner" .
+    skos:prefLabel "Local Owner" .
 
 utk:pbl a rdf:Property ;
     rdfs:isDefinedBy utk: ;
@@ -358,7 +358,7 @@ utk:pbl a rdf:Property ;
     rdfs:subPropertyOf dc:contributor ;
     skos:closeMatch relators:pbl ;
     skos:definition "A person or organization responsible for publishing, releasing, or issuing a resource"@en ;
-    skos:prefLabel "Publisher" .
+    skos:prefLabel "Local Publisher" .
 
 utk:pht a rdf:Property ;
     rdfs:isDefinedBy utk: ;
@@ -366,7 +366,7 @@ utk:pht a rdf:Property ;
     rdfs:subPropertyOf dc:contributor ;
     skos:closeMatch relators:pht ;
     skos:definition "A person, family, or organization responsible for creating a photographic work"@en ;
-    skos:prefLabel "Photographer" .
+    skos:prefLabel "Local Photographer" .
 
 utk:pop a rdf:Property ;
     rdfs:isDefinedBy utk: ;
@@ -374,7 +374,7 @@ utk:pop a rdf:Property ;
     rdfs:subPropertyOf dc:contributor ;
     skos:closeMatch relators:pop ;
     skos:definition "A person or organization who prints illustrations from plates"@en ;
-    skos:prefLabel "Printer of plates" .
+    skos:prefLabel "Local Printer of plates" .
 
 utk:prf a rdf:Property ;
     rdfs:isDefinedBy utk: ;
@@ -382,7 +382,7 @@ utk:prf a rdf:Property ;
     rdfs:subPropertyOf dc:contributor ;
     skos:closeMatch relators:prf ;
     skos:definition "A person contributing to a resource by performing music, acting, dancing, speaking, etc., often in a musical or dramatic presentation, etc. If specific codes are used, [prf] is used for a person whose principal skill is not known or specified"@en ;
-    skos:prefLabel "Performer" .
+    skos:prefLabel "Local Performer" .
 
 utk:prn a rdf:Property ;
     rdfs:isDefinedBy utk: ;
@@ -390,7 +390,7 @@ utk:prn a rdf:Property ;
     rdfs:subPropertyOf dc:contributor ;
     skos:closeMatch relators:prn ;
     skos:definition "An organization that is responsible for financial, technical, and organizational management of a production for stage, screen, audio recording, television, webcast, etc."@en ;
-    skos:prefLabel "Production company" .
+    skos:prefLabel "Local Production company" .
 
 utk:pro a rdf:Property ;
     rdfs:isDefinedBy utk: ;
@@ -398,7 +398,7 @@ utk:pro a rdf:Property ;
     rdfs:subPropertyOf dc:contributor ;
     skos:closeMatch relators:pro ;
     skos:definition "A person, family, or organization responsible for most of the business aspects of a production for screen, audio recording, television, webcast, etc. The producer is generally responsible for fund raising, managing the production, hiring key personnel, arranging for distributors, etc."@en ;
-    skos:prefLabel "Producer" .
+    skos:prefLabel "Local Producer" .
 
 utk:prt a rdf:Property ;
     rdfs:isDefinedBy utk: ;
@@ -406,7 +406,7 @@ utk:prt a rdf:Property ;
     rdfs:subPropertyOf dc:contributor ;
     skos:closeMatch relators:prt ;
     skos:definition "A person, family, or organization involved in manufacturing a manifestation of printed text, notated music, etc., from type or plates, such as a book, newspaper, magazine, broadside, score, etc."@en ;
-    skos:prefLabel "Printer" .
+    skos:prefLabel "Local Printer" .
 
 utk:pup a rdf:Property ;
     rdfs:isDefinedBy utk: ;
@@ -414,7 +414,7 @@ utk:pup a rdf:Property ;
     rdfs:subPropertyOf dc:contributor ;
     skos:closeMatch relators:pup ;
     skos:definition "The place where a resource is published"@en ;
-    skos:prefLabel "Publication place" .
+    skos:prefLabel "Local Publication place" .
 
 utk:rcp a rdf:Property ;
     rdfs:isDefinedBy utk: ;
@@ -422,7 +422,7 @@ utk:rcp a rdf:Property ;
     rdfs:subPropertyOf dc:contributor ;
     skos:closeMatch relators:rcp ;
     skos:definition "A person, family, or organization to whom the correspondence in a work is addressed"@en ;
-    skos:prefLabel "Addressee" .
+    skos:prefLabel "Local Addressee" .
 
 utk:rps a rdf:Property ;
     rdfs:isDefinedBy utk: ;
@@ -430,7 +430,7 @@ utk:rps a rdf:Property ;
     rdfs:subPropertyOf dc:contributor ;
     skos:closeMatch relators:rps ;
     skos:definition "An organization that hosts data or material culture objects and provides services to promote long term, consistent and shared use of those data or objects"@en ;
-    skos:prefLabel "Repository" .
+    skos:prefLabel "Local Repository" .
 
 utk:rsr a rdf:Property ;
     rdfs:isDefinedBy utk: ;
@@ -438,7 +438,7 @@ utk:rsr a rdf:Property ;
     rdfs:subPropertyOf dc:contributor ;
     skos:closeMatch relators:rsr ;
     skos:definition "A person, family, or organization responsible for the set of technical, editorial, and intellectual procedures aimed at compensating for the degradation of an item by bringing it back to a state as close as possible to its original condition"@en ;
-    skos:prefLabel "Restorationist" .
+    skos:prefLabel "Local Restorationist" .
 
 utk:sgd a rdf:Property ;
     rdfs:isDefinedBy utk: ;
@@ -446,7 +446,7 @@ utk:sgd a rdf:Property ;
     rdfs:subPropertyOf dc:contributor ;
     skos:closeMatch relators:sgd ;
     skos:definition "A person or organization contributing to a stage resource through the overall management and supervision of a performance"@en ;
-    skos:prefLabel "Stage director" .
+    skos:prefLabel "Local Stage director" .
 
 utk:sgn a rdf:Property ;
     rdfs:isDefinedBy utk: ;
@@ -454,7 +454,7 @@ utk:sgn a rdf:Property ;
     rdfs:subPropertyOf dc:contributor ;
     skos:closeMatch relators:sgn ;
     skos:definition "A person whose signature appears without a presentation or other statement indicative of provenance. When there is a presentation statement, use inscriber [ins]"@en ;
-    skos:prefLabel "Signer" .
+    skos:prefLabel "Local Signer" .
 
 utk:spk a rdf:Property ;
     rdfs:isDefinedBy utk: ;
@@ -462,7 +462,7 @@ utk:spk a rdf:Property ;
     rdfs:subPropertyOf dc:contributor ;
     skos:closeMatch relators:spk ;
     skos:definition "A performer contributing to a resource by speaking words, such as a lecture, speech, etc."@en ;
-    skos:prefLabel "Speaker" .
+    skos:prefLabel "Local Speaker" .
 
 utk:srv a rdf:Property ;
     rdfs:isDefinedBy utk: ;
@@ -470,7 +470,7 @@ utk:srv a rdf:Property ;
     rdfs:subPropertyOf dc:contributor ;
     skos:closeMatch relators:srv ;
     skos:definition "A person, family, or organization contributing to a cartographic resource by providing measurements or dimensional relationships for the geographic area represented"@en ;
-    skos:prefLabel "Surveyor" .
+    skos:prefLabel "Local Surveyor" .
 
 utk:std a rdf:Property ;
     rdfs:isDefinedBy utk: ;
@@ -478,7 +478,7 @@ utk:std a rdf:Property ;
     rdfs:subPropertyOf dc:contributor ;
     skos:closeMatch relators:std ;
     skos:definition "A person who translates the rough sketches of the art director into actual architectural structures for a theatrical presentation, entertainment, motion picture, etc. Set designers draw the detailed guides and specifications for building the set"@en ;
-    skos:prefLabel "Set designer" .
+    skos:prefLabel "Local Set designer" .
 
 utk:stm a rdf:Property ;
     rdfs:isDefinedBy utk: ;
@@ -486,7 +486,7 @@ utk:stm a rdf:Property ;
     rdfs:subPropertyOf dc:contributor ;
     skos:closeMatch relators:stm ;
     skos:definition "A person who is in charge of everything that occurs on a performance stage, and who acts as chief of all crews and assistant to a director during rehearsals"@en ;
-    skos:prefLabel "Stage manager" .
+    skos:prefLabel "Local Stage manager" .
 
 utk:stn a rdf:Property ;
     rdfs:isDefinedBy utk: ;
@@ -494,7 +494,7 @@ utk:stn a rdf:Property ;
     rdfs:subPropertyOf dc:contributor ;
     skos:closeMatch relators:stn ;
     skos:definition "An organization responsible for the development or enforcement of a standard"@en ;
-    skos:prefLabel "Standards body" .
+    skos:prefLabel "Local Standards body" .
 
 utk:trl a rdf:Property ;
     rdfs:isDefinedBy utk: ;
@@ -502,7 +502,7 @@ utk:trl a rdf:Property ;
     rdfs:subPropertyOf dc:contributor ;
     skos:closeMatch relators:trl ;
     skos:definition "A person or organization who renders a text from one language into another, or from an older form of a language into the modern form"@en ;
-    skos:prefLabel "Translator" .
+    skos:prefLabel "Local Translator" .
 
 utk:vdg a rdf:Property ;
     rdfs:isDefinedBy utk: ;
@@ -510,7 +510,7 @@ utk:vdg a rdf:Property ;
     rdfs:subPropertyOf dc:contributor ;
     skos:closeMatch relators:vdg ;
     skos:definition "A person in charge of a video production, e.g. the video recording of a stage production as opposed to a commercial motion picture. The videographer may be the camera operator or may supervise one or more camera operators. Do not confuse with cinematographer"@en ;
-    skos:prefLabel "Videographer" .
+    skos:prefLabel "Local Videographer" .
 
 utk:wit a rdf:Property ;
     rdfs:isDefinedBy utk: ;
@@ -518,12 +518,12 @@ utk:wit a rdf:Property ;
     rdfs:subPropertyOf dc:contributor ;
     skos:closeMatch relators:wit ;
     skos:definition "Use for a person who verifies the truthfulness of an event or action"@en ;
-    skos:prefLabel "Witness" .
+    skos:prefLabel "Local Witness" .
 
-utk: dcterms:modified "2022-08-23"^^xsd:date ;
+utk: dcterms:modified "2022-08-24"^^xsd:date ;
     dcterms:publisher <http://www.lib.utk.edu/> ;
     dcterms:title "University of Tennessee Digital Initiatives Role Terms Ontology"@en ;
     rdfs:comment "Ontology for the the University of Tennessee Libraries to state relationships between people and works.  This ontology exists because m3 profiles defined by Houndstooth cannot support both URIs and strings.  For that reason, this ontology exists and closely follows marcrelators.  The key difference is that this ontology is defined to work with values that are strings only."@en ;
     rdfs:seeAlso <https://github.com/utkdigitalinitiatives/utk_ontology/> ;
-    owl:versionInfo "2022-08-23"^^xsd:date .
+    owl:versionInfo "2022-08-24"^^xsd:date .
 
