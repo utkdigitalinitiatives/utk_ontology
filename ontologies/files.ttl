@@ -2,6 +2,7 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix pcdm:  <http://pcdm.org/models#> .
 @prefix pcdmff: <http://pcdm.org/file-format-types#> .
+@prefix pcdmworks: <http://pcdm.org/works#> .
 @prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix utk: <https://ontology.lib.utk.edu/works#> .
@@ -31,11 +32,26 @@ utk:hasVideoThumbnail a rdf:Property ;
     rdfs:seeAlso <https://www.w3.org/TR/media-frags/#naming-time> ;
     rdfs:isDefinedBy utk: .
 
+utk:hasWorkType a rdf:Property ;
+    rdfs:label "has work type"@en ;
+    rdfs:comment "Describes the work type of a pcdmworks:Work."@en ;
+    rdfs:domain pcdmworks:Work ;
+    rdfs:range utk:WorkType ;
+    rdfs:isDefinedBy utk: .
+
 utk:Behavior a rdfs:Class ;
-     rdfs:label "Behavior"@en ;
-     rdfs:comment "A feature that the publisher of IIIF content would prefer the client to use when presenting the resource."@en ;
-     rdfs:seeAlso <https://iiif.io/api/presentation/3.0/#behavior> ;
-     rdfs:isDefinedBy utk: .
+    rdfs:label "Behavior"@en ;
+    rdfs:comment "A feature that the publisher of IIIF content would prefer the client to use when presenting the resource."@en ;
+    rdfs:seeAlso <https://iiif.io/api/presentation/3.0/#behavior> ;
+    rdfs:isDefinedBy utk: .
+
+utk:ImageWork a utk:WorkType ;
+    rdfs:label "Image"@en ;
+    rdfs:seeAlso <https://utk-future-dc-worktypes.readthedocs.io/en/latest/contents/2_image.html> ;
+    rdfs:comment """
+    Image works are works where the primary fileset is derived from an image file such as a TIF, JP2, or JPEG. The
+    fileset is served by a IIIF Image Server and passed to a IIIF viewer on the Work page by a IIIF Presentation 3
+    manifest."""
 
 utk:NonPaged a utk:Behavior ;
     rdfs:label "non-paged"@en ;
@@ -65,6 +81,12 @@ utk:Unordered a utk:Behavior ;
     Valid on Collections, Manifests and Ranges. The Canvases included in resources that have this behavior have no
     inherent order, and user interfaces should avoid implying an order to the user. Disjoint with individuals,
     continuous, and paged.
+    """@en .
+
+utk:WorkType a pcdmworks:Work ;
+    rdfs:label "Work Type"@en ;
+    rdfs:comment """
+    Valid on pcdm:Works, a Work Type describes the data model and user expectations associated with a work.
     """@en .
 
 utk: dcterms:modified "2022-07-02"^^xsd:date ;
