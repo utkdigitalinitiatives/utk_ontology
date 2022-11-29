@@ -14,6 +14,15 @@ utk:hasBehavior a rdf:Property ;
     rdfs:domain pcdm:Object ;
     rdfs:isDefinedBy utk: .
 
+utk:hasType a rdf:Property ;
+    rdfs:label "has type" ;
+    rdfs:comment """
+    Signifies that the subject of a triple is an instance of a class. This is closely related to rdf:type but exists
+    since we can't reuse that property in Hyku.
+    """@en ;
+    rdfs:seeAlso rdf:type ;
+    rdfs:isDefinedBy utk: .
+
 utk:hasVideoThumbnail a rdf:Property ;
     rdfs:label "has video thumbnail"@en ;
     rdfs:comment "Links a Video file to a short clip that represents the resource via a temporal media fragment."@en ;
