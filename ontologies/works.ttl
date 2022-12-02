@@ -94,8 +94,8 @@ utk: dcterms:modified "2022-07-02"^^xsd:date ;
     dcterms:publisher <http://www.lib.utk.edu/> ;
     dcterms:title "University of Tennessee Digital Initiatives Files and Works Ontology"@en ;
     rdfs:comment """
-    Ontology for the the University of Tennessee Libraries to state relationships about works and the files they consist
-    of.  This ontology does not intend to supersede more established ontologies but instead exists to state relationships
-    when established properties cannot be identified.."""@en ;
+    Ontology for the University of Tennessee Libraries to state relationships about works and the files they consist of.
+    This ontology does not intend to supersede more established ontologies but instead exists to state relationships
+    when established properties cannot be identified."""@en ;
     rdfs:seeAlso <https://github.com/utkdigitalinitiatives/utk_ontology/> ;
     owl:versionInfo "2022/07/05" .
