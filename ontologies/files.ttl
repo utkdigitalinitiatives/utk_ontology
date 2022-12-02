@@ -51,7 +51,8 @@ utk:ImageWork a utk:WorkType ;
     rdfs:comment """
     Image works are works where the primary fileset is derived from an image file such as a TIF, JP2, or JPEG. The
     fileset is served by a IIIF Image Server and passed to a IIIF viewer on the Work page by a IIIF Presentation 3
-    manifest."""
+    manifest.
+    """@en .
 
 utk:NonPaged a utk:Behavior ;
     rdfs:label "non-paged"@en ;
