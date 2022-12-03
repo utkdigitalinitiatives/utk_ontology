@@ -1,7 +1,9 @@
 #!/usr/bin/env python
 from rdflib import Graph, BNode, Literal, URIRef
-from flask import Flask
+from flask import Flask, request, render_template
 from flask_rdf.flask import returns_rdf
+import flask_rdf
+from htmlify import htmlify
 
 app = Flask(__name__)
 
@@ -12,7 +14,11 @@ app = Flask(__name__)
 def roles(path=''):
     g = Graph()
     g.parse("ontologies/roles.ttl", format='ttl')
-    return g
+    if flask_rdf.wants_rdf(request.headers['Accept']) is False:
+        ontology = htmlify.OntologyCleaner(graph=g, namespace="https://ontology.lib.utk.edu/roles#")
+        return render_template('index.html', title=ontology.get_title())
+    else:
+        return g
 
 
 @app.route('/works')
