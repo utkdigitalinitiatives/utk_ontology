@@ -18,7 +18,7 @@ def roles(path=''):
 @returns_rdf
 def files(path=''):
   g = Graph()
-  g.parse("ontologies/files.ttl", format='ttl')
+  g.parse("ontologies/works.ttl", format='ttl')
   return g
 
 
