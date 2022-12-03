@@ -5,7 +5,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix relators: <http://id.loc.gov/vocabulary/relators/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix utk: <https://utk-ontologies.herokuapp.com/roles#> .
+@prefix utk: <https://ontology.lib.utk.edu/roles#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 utk:arc a rdf:Property ;
@@ -523,7 +523,7 @@ utk:wit a rdf:Property ;
 utk: dcterms:modified "2022-08-24"^^xsd:date ;
     dcterms:publisher <http://www.lib.utk.edu/> ;
     dcterms:title "University of Tennessee Digital Initiatives Role Terms Ontology"@en ;
-    rdfs:comment "Ontology for the the University of Tennessee Libraries to state relationships between people and works.  This ontology exists because m3 profiles defined by Houndstooth cannot support both URIs and strings.  For that reason, this ontology exists and closely follows marcrelators.  The key difference is that this ontology is defined to work with values that are strings only."@en ;
+    rdfs:comment "Ontology for the University of Tennessee Libraries to state relationships between people and works. This ontology exists because m3 profiles defined by Houndstooth and Allison Flex cannot support both URIs and strings in the same property.  For that reason, this ontology exists and closely follows marcrelators.  The key difference is that this ontology is defined to work with values that are strings only."@en ;
     rdfs:seeAlso <https://github.com/utkdigitalinitiatives/utk_ontology/> ;
     owl:versionInfo "2022-08-24"^^xsd:date .
 

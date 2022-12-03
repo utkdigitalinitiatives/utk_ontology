@@ -14,7 +14,7 @@ def roles(path=''):
   g.parse("ontologies/roles.ttl", format='ttl')
   return g
 
-@app.route('/files')
+@app.route('/works')
 @returns_rdf
 def files(path=''):
   g = Graph()
