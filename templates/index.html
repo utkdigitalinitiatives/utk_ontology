@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+    {% block head %}
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    {% block styles %}
+    <!-- Bootstrap CSS -->
+    {{ bootstrap.load_css() }}
+    {% endblock %}
+
+    <title>{{ title }}</title>
+    {% endblock %}
+</head>
+<body>
+<!-- Your page content -->
+{% block content %}{% endblock %}
+
+{% block scripts %}
+<!-- Optional JavaScript -->
+{{ bootstrap.load_js() }}
+{% endblock %}
+<div class="p-5 text-center bg-light">
+    <h1>{{ details.title }}</h1>
+</div>
+<hr class="hr" />
+<div class="container-sm">
+    <h2>Ontology Information</h2>
+    <div class="row">
+        <div class="col">
+            <table class="table">
+                <tbody>
+                <tr>
+                    <th scope="row">Title</th>
+                    <td> {{ details.title }}</td>
+                </tr>
+                <tr>
+                    <th scope="row">Description</th>
+                    <td> {{ details.definition }}</td>
+                </tr>
+                <tr>
+                    <th scope="row">Namespace</th>
+                    <td> {{ details.namespace }}</td>
+                </tr>
+                <tr>
+                    <th scope="row">Version</th>
+                    <td> {{ details.version }}</td>
+                </tr>
+                <tr>
+                    <th scope="row">Last Modified</th>
+                    <td> {{ details.last_modified }}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<hr class="hr" />
+<div class="container-sm">
+    <h2>Properties and Classes</h2>
+</div>
+</body>
+</html>
