@@ -1,3 +1,5 @@
+from rdflib import URIRef
+
 class OntologyCleaner:
     def __init__(self, graph, namespace):
         self.full_ontology = graph
@@ -29,11 +31,76 @@ class OntologyCleaner:
     def __get_properties_and_classes(self):
         properties = {}
         for s, p, o in self.full_ontology:
-            if str(s) is not self.namespace:
-                if str(s) not in properties:
-                    properties[str(s)] = {}
-                    properties[str(s)][str(p)] = str(o)
+            if self.__namespace_if_uri(s) is not self.namespace:
+                if self.__namespace_if_uri(s) not in properties:
+                    properties[self.__namespace_if_uri(s)] = {}
+                    properties[self.__namespace_if_uri(s)][self.__namespace_if_uri(p)] = self.__namespace_if_uri(o)
                 else:
-                    properties[str(s)][str(p)] = str(o)
+                    properties[self.__namespace_if_uri(s)][self.__namespace_if_uri(p)] = self.__namespace_if_uri(o)
         return properties
 
+    @staticmethod
+    def __namespace_if_uri(potential_uri):
+        namespaces = (
+            {
+                'namespace': 'http://purl.org/dc/elements/1.1/',
+                'prefix': 'dc'
+            },
+            {
+                'namespace': 'http://purl.org/dc/terms/',
+                'prefix': 'dcterms'
+            },
+            {
+                'namespace': 'http://www.w3.org/2002/07/owl#',
+                'prefix': 'owl'
+            },
+            {
+                'namespace': 'http://pcdm.org/models#',
+                'prefix': 'pcdm'
+            },
+            {
+                'namespace': 'http://pcdm.org/file-format-types#',
+                'prefix': 'pcdmff'
+            },
+            {
+                'namespace': 'http://pcdm.org/works#',
+                'prefix': 'pcdmworks'
+            },
+            {
+                'namespace': 'http://www.w3.org/1999/02/22-rdf-syntax-ns#',
+                'prefix': 'rdf'
+            },
+            {
+                'namespace': 'http://www.w3.org/2000/01/rdf-schema#',
+                'prefix': 'rdfs'
+            },
+            {
+                'namespace': 'http://id.loc.gov/vocabulary/relators/',
+                'prefix': 'relators'
+            },
+            {
+                'namespace': 'http://www.w3.org/2004/02/skos/core#',
+                'prefix': 'skos'
+            },
+            {
+                'namespace': 'https://ontology.lib.utk.edu/roles#',
+                'prefix': 'utk_roles'
+            },
+            {
+                'namespace': 'https://ontology.lib.utk.edu/works#',
+                'prefix': 'utk_works'
+            },
+            {
+                'namepsace': 'http://www.w3.org/2001/XMLSchema#',
+                'prefix': 'xsd'
+            }
+        )
+        if type(potential_uri) == URIRef:
+            for namespace in namespaces:
+                if namespace['namespace'] in potential_uri and '#' in potential_uri:
+                    return f"{namespace['prefix']}:{potential_uri.fragment}"
+                elif namespace['namespace'] in potential_uri:
+                    return f"{namespace['prefix']}:{str(potential_uri).split('/')[-1]}"
+            return str(potential_uri)
+        else:
+            return str(potential_uri)
