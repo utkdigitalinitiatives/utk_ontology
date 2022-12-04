@@ -4,8 +4,10 @@ from flask import Flask, request, render_template
 from flask_rdf.flask import returns_rdf
 import flask_rdf
 from htmlify import htmlify
+from flask_bootstrap import Bootstrap5
 
 app = Flask(__name__)
+bootstrap = Bootstrap5(app)
 
 
 @app.route('/roles')
@@ -16,7 +18,10 @@ def roles(path=''):
     g.parse("ontologies/roles.ttl", format='ttl')
     if flask_rdf.wants_rdf(request.headers['Accept']) is False:
         ontology = htmlify.OntologyCleaner(graph=g, namespace="https://ontology.lib.utk.edu/roles#")
-        return render_template('index.html', title=ontology.get_title())
+        return render_template(
+            'index.html',
+            details=ontology.ontology_details
+        )
     else:
         return g
 
