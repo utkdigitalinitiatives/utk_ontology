@@ -3,6 +3,7 @@ class OntologyCleaner:
         self.full_ontology = graph
         self.namespace = namespace
         self.ontology_details = self.__get_details()
+        self.properties_and_classes = self.__get_properties_and_classes()
 
     def __get_details(self):
         ontology_details = {
@@ -26,9 +27,13 @@ class OntologyCleaner:
         return ontology_details
 
     def __get_properties_and_classes(self):
-        properties = []
+        properties = {}
         for s, p, o in self.full_ontology:
             if str(s) is not self.namespace:
-                return
-
+                if str(s) not in properties:
+                    properties[str(s)] = {}
+                    properties[str(s)][str(p)] = str(o)
+                else:
+                    properties[str(s)][str(p)] = str(o)
+        return properties
 
