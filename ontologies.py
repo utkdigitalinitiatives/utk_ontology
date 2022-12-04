@@ -20,7 +20,8 @@ def roles(path=''):
         ontology = htmlify.OntologyCleaner(graph=g, namespace="https://ontology.lib.utk.edu/roles#")
         return render_template(
             'index.html',
-            details=ontology.ontology_details
+            details=ontology.ontology_details,
+            classes_and_props=ontology.properties_and_classes
         )
     else:
         return g
