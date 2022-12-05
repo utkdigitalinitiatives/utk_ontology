@@ -10,6 +10,17 @@ app = Flask(__name__)
 bootstrap = Bootstrap5(app)
 
 
+@app.route('/')
+@app.route('/index')
+def index():
+    return render_template(
+        'index.html',
+        details={
+            'title': 'UTK Digital Initiatives Ontologies'
+        }
+    )
+
+
 @app.route('/roles')
 @app.route('/<path:path>')
 @returns_rdf
@@ -19,7 +30,7 @@ def roles(path=''):
     if flask_rdf.wants_rdf(request.headers['Accept']) is False:
         ontology = htmlify.OntologyCleaner(graph=g, namespace="https://ontology.lib.utk.edu/roles#")
         return render_template(
-            'index.html',
+            'ontology.html',
             details=ontology.ontology_details,
             classes_and_props=ontology.properties_and_classes,
             namespaces=ontology.all_namespaces
@@ -36,7 +47,7 @@ def files(path=''):
     if flask_rdf.wants_rdf(request.headers['Accept']) is False:
         ontology = htmlify.OntologyCleaner(graph=g, namespace="https://ontology.lib.utk.edu/works#")
         return render_template(
-            'index.html',
+            'ontology.html',
             details=ontology.ontology_details,
             classes_and_props=ontology.properties_and_classes,
             namespaces=ontology.all_namespaces
