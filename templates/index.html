@@ -59,6 +59,23 @@
 </div>
 <hr class="hr"/>
 <div class="container-sm">
+    <h3>Namespaces Defined</h3>
+    <div class="row">
+        <div class="col">
+            <table class="table">
+                <tbody>
+                {% for namespace in namespaces %}
+                <tr>
+                    <th scope="row">{{namespace.prefix}}</th>
+                    <td>{{namespace.namespace}}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+</div>
+<hr class="hr"/>
+<div class="container-sm">
     <h2>Properties and Classes</h2>
     <div class="row">
         {% for key, value in classes_and_props.items() %}

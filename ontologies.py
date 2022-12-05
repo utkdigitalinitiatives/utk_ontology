@@ -21,7 +21,8 @@ def roles(path=''):
         return render_template(
             'index.html',
             details=ontology.ontology_details,
-            classes_and_props=ontology.properties_and_classes
+            classes_and_props=ontology.properties_and_classes,
+            namespaces=ontology.all_namespaces
         )
     else:
         return g
@@ -31,8 +32,17 @@ def roles(path=''):
 @returns_rdf
 def files(path=''):
     g = Graph()
-    g.parse("ontologies/files.ttl", format='ttl')
-    return g
+    g.parse("ontologies/works.ttl", format='ttl')
+    if flask_rdf.wants_rdf(request.headers['Accept']) is False:
+        ontology = htmlify.OntologyCleaner(graph=g, namespace="https://ontology.lib.utk.edu/works#")
+        return render_template(
+            'index.html',
+            details=ontology.ontology_details,
+            classes_and_props=ontology.properties_and_classes,
+            namespaces=ontology.all_namespaces
+        )
+    else:
+        return g
 
 
 if __name__ == '__main__':

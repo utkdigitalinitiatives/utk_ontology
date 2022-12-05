@@ -1,9 +1,11 @@
 from rdflib import URIRef
 
+
 class OntologyCleaner:
     def __init__(self, graph, namespace):
         self.full_ontology = graph
         self.namespace = namespace
+        self.all_namespaces = self.__define_namespaces()
         self.ontology_details = self.__get_details()
         self.properties_and_classes = self.__get_properties_and_classes()
 
@@ -40,8 +42,8 @@ class OntologyCleaner:
         return properties
 
     @staticmethod
-    def __namespace_if_uri(potential_uri):
-        namespaces = (
+    def __define_namespaces():
+        return (
             {
                 'namespace': 'http://purl.org/dc/elements/1.1/',
                 'prefix': 'dc'
@@ -95,9 +97,10 @@ class OntologyCleaner:
                 'prefix': 'xsd'
             }
         )
+
+    def __namespace_if_uri(self, potential_uri):
         if type(potential_uri) == URIRef:
-            for namespace in namespaces:
-                print(namespace)
+            for namespace in self.all_namespaces:
                 if namespace['namespace'] in potential_uri and '#' in potential_uri:
                     return f"{namespace['prefix']}:{potential_uri.fragment}"
                 elif namespace['namespace'] in potential_uri:
