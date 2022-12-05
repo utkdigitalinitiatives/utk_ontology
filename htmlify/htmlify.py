@@ -91,12 +91,13 @@ class OntologyCleaner:
                 'prefix': 'utk_works'
             },
             {
-                'namepsace': 'http://www.w3.org/2001/XMLSchema#',
+                'namespace': 'http://www.w3.org/2001/XMLSchema#',
                 'prefix': 'xsd'
             }
         )
         if type(potential_uri) == URIRef:
             for namespace in namespaces:
+                print(namespace)
                 if namespace['namespace'] in potential_uri and '#' in potential_uri:
                     return f"{namespace['prefix']}:{potential_uri.fragment}"
                 elif namespace['namespace'] in potential_uri:
