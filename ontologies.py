@@ -5,6 +5,7 @@ from flask_rdf.flask import returns_rdf
 import flask_rdf
 from htmlify import htmlify
 from flask_bootstrap import Bootstrap5
+import os
 
 app = Flask(__name__)
 bootstrap = Bootstrap5(app)
@@ -13,11 +14,27 @@ bootstrap = Bootstrap5(app)
 @app.route('/')
 @app.route('/index')
 def index():
+    all_ontologies = []
+    for p, d, f in os.walk('ontologies'):
+        for ontology in f:
+            g = Graph()
+            g.parse(f"ontologies/{ontology}", format='ttl')
+            ontology_info = htmlify.OntologyCleaner(
+                graph=g,
+                namespace=f"https://ontology.lib.utk.edu/{ontology.replace('.ttl', '')}#"
+            )
+            all_ontologies.append(
+                {
+                    'url': f'/{ontology.replace(".ttl", "")}',
+                    'title': ontology_info.ontology_details['title']
+                }
+            )
     return render_template(
         'index.html',
         details={
             'title': 'UTK Digital Initiatives Ontologies'
-        }
+        },
+        ontologies=all_ontologies
     )
 
 
