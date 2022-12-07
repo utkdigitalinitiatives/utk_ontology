@@ -38,7 +38,7 @@
                     </tr>
                     </thead>
                     <tr>
-                        <th scope="row">Title</th>
+                        <th scope="row" class="w-25">Title</th>
                         <td> {{ details.title }}</td>
                     </tr>
                     <tr>
@@ -75,7 +75,7 @@
                     </thead>
                     {% for namespace in namespaces %}
                     <tr>
-                        <th scope="row">{{namespace.prefix}}</th>
+                        <th scope="row" class="w-25">{{namespace.prefix}}</th>
                         <td>{{namespace.namespace}}</td>
                     </tr>
                     {% endfor %}
@@ -101,7 +101,7 @@
                         </thead>
                         {% for p, o in value.items() %}
                         <tr>
-                            <th scope="row">{{p}}</th>
+                            <th scope="row" class="w-25">{{p}}</th>
                             <td>{{o}}</td>
                         </tr>
                         {% endfor %}
