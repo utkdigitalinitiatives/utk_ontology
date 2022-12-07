@@ -10,6 +10,18 @@ python-versions = ">=3.6"
 python-dateutil = ">=2.7.0"
 
 [[package]]
+name = "bootstrap-flask"
+version = "2.2.0"
+description = "Bootstrap 4 & 5 helper for your Flask projects."
+category = "main"
+optional = false
+python-versions = "*"
+
+[package.dependencies]
+Flask = "*"
+WTForms = "*"
+
+[[package]]
 name = "certifi"
 version = "2022.6.15"
 description = "Python package for providing Mozilla's CA Bundle."
@@ -251,13 +263,28 @@ python-versions = ">=3.7"
 [package.extras]
 watchdog = ["watchdog"]
 
+[[package]]
+name = "wtforms"
+version = "3.0.1"
+description = "Form validation and rendering for Python web development."
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.dependencies]
+MarkupSafe = "*"
+
+[package.extras]
+email = ["email-validator"]
+
 [metadata]
 lock-version = "1.1"
 python-versions = "3.10.4"
-content-hash = "1f32c6b881a6d3fa0eb71cdfa35dad8fd7b90f2aa696e7e9afa4ba78c1bc460e"
+content-hash = "4ec5bb70b3cb326467e434f0e4518ac0e822013060c2ea7ac837f26c0a587d47"
 
 [metadata.files]
 arrow = []
+bootstrap-flask = []
 certifi = [
     {file = "certifi-2022.6.15-py3-none-any.whl", hash = "sha256:fe86415d55e84719d75f8b69414f6438ac3547d2078ab91b67e779ef69378412"},
     {file = "certifi-2022.6.15.tar.gz", hash = "sha256:84c85a9078b11105f04f3036a9482ae10e4621616db313fe045dd24743a0820d"},
@@ -377,4 +404,8 @@ urllib3 = [
 werkzeug = [
     {file = "Werkzeug-2.1.2-py3-none-any.whl", hash = "sha256:72a4b735692dd3135217911cbeaa1be5fa3f62bffb8745c5215420a03dc55255"},
     {file = "Werkzeug-2.1.2.tar.gz", hash = "sha256:1ce08e8093ed67d638d63879fd1ba3735817f7a80de3674d293f5984f25fb6e6"},
+]
+wtforms = [
+    {file = "WTForms-3.0.1-py3-none-any.whl", hash = "sha256:837f2f0e0ca79481b92884962b914eba4e72b7a2daaf1f939c890ed0124b834b"},
+    {file = "WTForms-3.0.1.tar.gz", hash = "sha256:6b351bbb12dd58af57ffef05bc78425d08d1914e0fd68ee14143b7ade023c5bc"},
 ]

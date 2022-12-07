@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+    {% block head %}
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    {% block styles %}
+    <!-- Bootstrap CSS -->
+    {{ bootstrap.load_css() }}
+    {% endblock %}
+
+    <title>{{ title }}</title>
+    {% endblock %}
+</head>
+<body>
+<!-- Your page content -->
+{% block content %}{% endblock %}
+
+{% block scripts %}
+<!-- Optional JavaScript -->
+{{ bootstrap.load_js() }}
+{% endblock %}
+<div class="container-lg">
+    <div class="p-5 text-center bg-default">
+        <h1>{{ details.title }}</h1>
+    </div>
+    <hr class="hr"/>
+    <div class="container-sm">
+        <div class="row">
+            <div class="col">
+                <table class="table">
+                    <thead class="table-primary">
+                    <tr>
+                        <th colspan="2"><h3>Ontologies</h3></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for ontology in ontologies %}
+                    <tr>
+                        <th scope="row">Title</th>
+                        <td><a href={{ontology.url}}> {{ ontology.title }}</a></td>
+                    </tr>
+                    {% endfor %}
+                    </tbody>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
