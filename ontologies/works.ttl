@@ -39,6 +39,15 @@ utk:hasWorkType a rdf:Property ;
     rdfs:range utk:WorkType ;
     rdfs:isDefinedBy utk: .
 
+utk:AudioWork a utk:WorkType ;
+    rdfs:label "Audio"@en ;
+    rdfs:seeAlso <https://utk-future-dc-worktypes.readthedocs.io/en/latest/contents/4_audio.html> ;
+    rdfs:comment """
+    Audio works are works where the primary fileset(s) are derived from one or more audio files. The fileset(s) should
+    be served to a IIIF viewer on the Work page by a IIIF Presentation 3 manifest. While there may be multiple filesets,
+    there should only be one canvas with multiple annotations.
+    """@en .
+
 utk:Behavior a rdfs:Class ;
     rdfs:label "Behavior"@en ;
     rdfs:comment "A feature that the publisher of IIIF content would prefer the client to use when presenting the resource."@en ;
@@ -84,13 +93,21 @@ utk:Unordered a utk:Behavior ;
     continuous, and paged.
     """@en .
 
+utk:VideoWork a utk:WorkType ;
+    rdfs:label "Video"@en ;
+    rdfs:seeAlso <https://utk-future-dc-worktypes.readthedocs.io/en/latest/contents/3_video.html> ;
+    rdfs:comment """
+    Video works are works where the primary fileset is derived from a video file. The file should be served to a IIIF
+    viewer on the Work page by a IIIF Presentation 3 manifest.
+    """@en .
+
 utk:WorkType a pcdmworks:Work ;
     rdfs:label "Work Type"@en ;
     rdfs:comment """
     Valid on pcdm:Works, a Work Type describes the data model and user expectations associated with a work.
     """@en .
 
-utk: dcterms:modified "2022-07-02"^^xsd:date ;
+utk: dcterms:modified "2022-12-12"^^xsd:date ;
     dcterms:publisher <http://www.lib.utk.edu/> ;
     dcterms:title "University of Tennessee Digital Initiatives Files and Works Ontology"@en ;
     rdfs:comment """
@@ -98,4 +115,4 @@ utk: dcterms:modified "2022-07-02"^^xsd:date ;
     This ontology does not intend to supersede more established ontologies but instead exists to state relationships
     when established properties cannot be identified."""@en ;
     rdfs:seeAlso <https://github.com/utkdigitalinitiatives/utk_ontology/> ;
-    owl:versionInfo "2022/07/05" .
+    owl:versionInfo "2022-12-12" .
