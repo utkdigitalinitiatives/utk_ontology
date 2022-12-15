@@ -54,6 +54,35 @@ utk:Behavior a rdfs:Class ;
     rdfs:seeAlso <https://iiif.io/api/presentation/3.0/#behavior> ;
     rdfs:isDefinedBy utk: .
 
+utk:BookWork a utk:WorkType ;
+    rdfs:label "Book"@en ;
+    rdfs:seeAlso <https://utk-future-dc-worktypes.readthedocs.io/en/latest/contents/6_books_and_pages.html> ;
+    rdfs:comment """
+    Book works are works that are made up of 1 to many pages that are intended to be served in a IIIF viewer as a paged
+    object.
+    """@en .
+
+utk:CompoundObjectWork a utk:WorkType ;
+    rdfs:label "Compound Object"@en ;
+    rdfs:seeAlso <https://utk-future-dc-worktypes.readthedocs.io/en/latest/contents/7_compound_objects.html> ;
+    rdfs:comment """
+    Compound object works are works that are made up of 2 or more works. These works can be a combination of images,
+    audio, video, and/or books. Compound objects are special in that the works the objects consist of are significant
+    enough that they are able to stand alone in the wild in a system like the Digital Public Library of America. These
+    sub parts have significant metadata which should lead to their inclusion in OAI-PMH. For the sake of user
+    experience, parts of compound objects may not be displayed as stand alone objects in the same collection of a parent
+    compound object.
+    """@en .
+
+utk:GenericWork a utk:WorkType ;
+    rdfs:label "Generic Work"@en ;
+    rdfs:seeAlso <https://utk-future-dc-worktypes.readthedocs.io/en/latest/contents/1_generic.html> ;
+    rdfs:comment """
+    Generic works are works where the primary fileset(s) are binary with no complex expectations for user experience or
+    viewer in the browser. Instead, the primary purpose of this work type is to preserve and make available to users
+    binary file types such as WARCs or born digital objects.
+    """@en .
+
 utk:ImageWork a utk:WorkType ;
     rdfs:label "Image"@en ;
     rdfs:seeAlso <https://utk-future-dc-worktypes.readthedocs.io/en/latest/contents/2_image.html> ;
@@ -61,6 +90,15 @@ utk:ImageWork a utk:WorkType ;
     Image works are works where the primary fileset is derived from an image file such as a TIF, JP2, or JPEG. The
     fileset is served by a IIIF Image Server and passed to a IIIF viewer on the Work page by a IIIF Presentation 3
     manifest.
+    """@en .
+
+utk:NewspaperWork a utk:WorkType ;
+    rdfs:label "Newspaper"@en ;
+    rdfs:seeAlso <https://utk-future-dc-worktypes.readthedocs.io/en/latest/contents/8_newspapers.html> ;
+    rdfs:comment """
+    Newspaper works are perhaps our most complex worktype. Unlike books and compound objects, newspapers have a
+    hierarchical structure that starts with a title, breaks down into volumes, and further down into issues. The date
+    of publication and access to OCR data via METS / ALTO are critical to the viewing experience.
     """@en .
 
 utk:NonPaged a utk:Behavior ;
@@ -82,6 +120,14 @@ utk:Paged a utk:Behavior ;
     interface if one is available. The first canvas is a single view (the first recto) and thus the second canvas likely
     represents the back of the object in the first canvas. If this is not the case, see the behavior value non-paged.
     Disjoint with unordered, individuals, continuous, facing-pages and non-paged.
+    """@en .
+
+utk:PDFWork a utk:WorkType ;
+    rdfs:label "PDF"@en ;
+    rdfs:seeAlso <https://utk-future-dc-worktypes.readthedocs.io/en/latest/contents/5_pdf.html> ;
+    rdfs:comment """
+    PDF works are works where the primary fileset(s) are PDFs. PDFs should minimally display something that allows the
+    item to be opened in a new tab or with the PDF.js viewer.
     """@en .
 
 utk:Unordered a utk:Behavior ;
