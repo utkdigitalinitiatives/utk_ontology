@@ -39,6 +39,12 @@ utk:hasWorkType a rdf:Property ;
     rdfs:range utk:WorkType ;
     rdfs:isDefinedBy utk: .
 
+utk:isAssociatedWithPage a rdf:Property ;
+    rdfs:label "is associated with page"@en ;
+    rdfs:comment "Describes the page an attachment, fileset, or other pcdm:object is related to"@en ;
+    rdfs:domain pcdm:Object ;
+    rdfs:range rdfs:Literal .
+
 utk:AudioWork a utk:WorkType ;
     rdfs:label "Audio"@en ;
     rdfs:seeAlso <https://utk-future-dc-worktypes.readthedocs.io/en/latest/contents/4_audio.html> ;
