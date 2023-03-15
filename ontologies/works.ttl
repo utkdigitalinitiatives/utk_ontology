@@ -54,6 +54,13 @@ utk:AudioWork a utk:WorkType ;
     there should only be one canvas with multiple annotations.
     """@en .
 
+ utk:shareMetadata a rdf:Property ;
+    rdfs:label "share metadata"@en ;
+    rdfs:comment "Indicates whether metadata should be shared or restricted (in OAI-PMH, etc.)."@en ;
+    rdfs:domain utk:WorkType ;
+    rdfs:range rdfs:Literal ;
+    rdfs:isDefinedBy utk: .
+
 utk:Behavior a rdfs:Class ;
     rdfs:label "Behavior"@en ;
     rdfs:comment "A feature that the publisher of IIIF content would prefer the client to use when presenting the resource."@en ;
