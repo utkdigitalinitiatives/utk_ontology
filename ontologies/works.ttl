@@ -58,7 +58,7 @@ utk:AudioWork a utk:WorkType ;
     rdfs:label "share metadata"@en ;
     rdfs:comment "Indicates whether metadata should be shared or restricted (in OAI-PMH, etc.)."@en ;
     rdfs:domain utk:WorkType ;
-    rdfs:range rdfs:Literal;
+    rdfs:range rdfs:Literal ;
     rdfs:isDefinedBy utk: .
 
 utk:Behavior a rdfs:Class ;
