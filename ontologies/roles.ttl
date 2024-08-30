@@ -328,6 +328,14 @@ utk:msd a rdf:Property ;
     skos:definition "A person who coordinates the activities of the composer, the sound editor, and sound mixers for a moving image production or for a musical or dramatic presentation or entertainment"@en ;
     skos:prefLabel "Local musical director" .
 
+utk:mtk a rdf:Property ;
+    rdfs:isDefinedBy utk: ;
+    rdfs:range rdfs:Literal ;
+    rdfs:subPropertyOf dc:contributor ;
+    skos:closeMatch relators:mtk ;
+    skos:definition "A person, family, or organization responsible for recording the minutes of a meeting"@en ;
+    skos:prefLabel "Minute taker" .
+
 utk:org a rdf:Property ;
     rdfs:isDefinedBy utk: ;
     rdfs:range rdfs:Literal ;
