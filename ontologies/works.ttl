@@ -96,11 +96,11 @@ utk:GenericWork a utk:WorkType ;
     binary file types such as WARCs or born digital objects.
     """@en .
 
-utk:ImageWork a utk:WorkType ;
-    rdfs:label "Image"@en ;
+utk:StillImageWork a utk:WorkType ;
+    rdfs:label "StillImage"@en ;
     rdfs:seeAlso <https://utk-future-dc-worktypes.readthedocs.io/en/latest/contents/2_image.html> ;
     rdfs:comment """
-    Image works are works where the primary fileset is derived from an image file such as a TIF, JP2, or JPEG. The
+    Still Image works are works where the primary fileset is derived from an image file such as a TIF, JP2, or JPEG. The
     fileset is served by a IIIF Image Server and passed to a IIIF viewer on the Work page by a IIIF Presentation 3
     manifest.
     """@en .
